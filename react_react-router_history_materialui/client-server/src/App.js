@@ -5,6 +5,7 @@ import './App.css';
 
 import { Home } from './home';
 import { Project } from './project';
+import { ReactLikeRedux } from './react-like-redux';
 
 import { BackButton } from './components/back-button';
 import AppBar from 'material-ui/AppBar';
@@ -18,16 +19,19 @@ class App extends Component {
           <AppBar title="Projects Dashboard" 
                   showMenuIconButton={false}/>
 
-          <Route exact path="/:id" 
+          <Route exact path="/project/:id" 
                  component={BackButton} />
 
           <Switch>
               <Route exact 
-                    path='/' 
-                    component={Home} />
+                     path='/' 
+                     component={Home} />
               <Route exact 
-                    path='/:id' 
-                    component={Project} />
+                     path='/project/:id' 
+                     component={Project} />
+              <Route exact 
+                     path='/react-like-redux/' 
+                     component={ReactLikeRedux} />
           </Switch>
         </div>
     )

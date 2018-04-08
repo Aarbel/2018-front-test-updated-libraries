@@ -23,7 +23,7 @@ export class Home extends Component {
             <div key={index} 
                  className="project-card"
                  onClick={() => {
-                    history.push('/' + project.id)
+                    history.push('/project/' + project.id)
                  }}>
     
                 <img alt="" 
